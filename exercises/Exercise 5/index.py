@@ -38,5 +38,5 @@ try:
         es.index(index=unique_index, doc_type='chgk', id=instance.id, body={'question': instance.question, 'answer': instance.answer})
     print('new index finished')
 except Exception:
-    es.indices.delete(index=unique_index, ignore=[400, 404])
+    #es.indices.delete(index=unique_index, ignore=[400, 404])
     print('index already exist')
